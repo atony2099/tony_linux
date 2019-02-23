@@ -6,26 +6,38 @@
 [前端&后端程序员必备的 Linux 基础知识](https://juejin.im/post/5b3b19856fb9a04fa42f8c71)
 
 
-## linux内核。
+## 基础结构
 
-  
+![](http://ww1.sinaimg.cn/large/006dizvAly1g0glibj0xzj30a30870t4.jpg)
+
+![](https://i1.wp.com/blog4jimmy.com/wp-content/uploads/2017/12/mmap2.png)
 
 
+### 内核
 
-## 操作系统
+主要职责:
+1. 内存管理
+2. 程序管理
+3. 设备管理
+4. 文件管理
+![](http://ww1.sinaimg.cn/large/006dizvAly1g0glzt8qrpj30m60ew411.jpg)
 
-分为内核 和外核，
-内核主要是和硬件打交道。
-外核面向用户
 
-而我们说的 linux 一般是指 linux 内核。
+### GNU工具
+
 
 ## 发行版本。
-
-基于 linux 内核开发的
+应用软件和内核构成了发行版本，也即是用户可以直接使用的linux系统
 ![](https://user-gold-cdn.xitu.io/2018/7/3/1645efa7048fd018?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
-## directory
+
+
+## linux的文件系统
+linux没有区分c盘 d盘；
+把所有文件都放在同一个目录结构中。这个目录即是虚拟目录。
+
+
+### directory base
 
 ![](http://www.debianadmin.com/images/ldr.png)
 
@@ -49,20 +61,11 @@
 
 `lsb -release --print distribution specific information`
 
-## usr
+### usr
 
 Unix System Resource
 
 1. /usr/bin 下面的都是系统预装的可执行程序
 2. /usr/local/bin 目录是给用户放置自己的可执行程序的地方，推荐放在这里，不会被系统升级而覆盖同名文件。
 
-## 监控
 
-### 内存监控
-
-内存监控
-`free -h`
-
--buffers/cache 的内存数：95 (等于第 1 行的 used - buffers - cached)
-+buffers/cache 的内存数: 32 (等于第 1 行的 free + buffers + cached)
-可见-buffers/cache 反映的是被程序实实在在吃掉的内存，而+buffers/cache 反映的是可以挪用的内存总数。

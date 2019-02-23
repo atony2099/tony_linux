@@ -1,4 +1,15 @@
-# linux
+# shell脚本
+
+## 什么是shell;
+一门编程语言。
+
+有以下几种类型
+Bourne Shell（/usr/bin/sh或/bin/sh）
+Bourne Again Shell（/bin/bash） (bash shell,linux 默认支持的。)
+C Shell（/usr/bin/csh）
+K Shell（/usr/bin/ksh）
+Shell for Root（/sbin/sh）
+
 
 ## man [command]
 
@@ -228,3 +239,80 @@ apt-update
 apt-install <pack_age>
 
 ```
+
+
+
+### 内存监控
+
+内存监控
+`free -h`
+
+-buffers/cache 的内存数：95 (等于第 1 行的 used - buffers - cached)
++buffers/cache 的内存数: 32 (等于第 1 行的 free + buffers + cached)
+可见-buffers/cache 反映的是被程序实实在在吃掉的内存，而+buffers/cache 反映的是可以挪用的内存总数。
+
+
+# command
+
+## grep
+[grep](https://www.jianshu.com/p/9eb2edefecb7?from=singlemessage)
+global search regular expression(RE) and print out the line
+
+
+
+
+## ps 
+[ps](https://www.tecmint.com/ps-command-examples-for-linux-process-monitoring/)
+[ps-all](https://www.lifewire.com/uses-of-linux-ps-command-4058715)
+
+process
+`ps -ef | grep processname`
+
+1. ps:list processes
+2. -e: show all process 
+3. -f - show processes in full format (more detailed than default)
+
+
+
+### ps
+it displays processes for the current shell.
+
+### ps -A -e
+Display every active process on a Linux system in generic (Unix/Linux) format.
+
+
+
+
+### ps -ef
+To perform a full-format listing, add the -f or -F flag.
+
+The columns returned are as follows:
+User ID
+PID
+PPID
+C
+STime
+TTY
+Time
+Command
+
+
+### ps aux
+Display all processes in BSD format.
+
+
+
+
+## find
+
+```
+find  path -type d -name "apt
+```
+
+
+
+
+
+
+
+
